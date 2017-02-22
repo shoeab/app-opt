@@ -29,7 +29,7 @@ angular.module('appRoutes', ['ngRoute'])
 		})
 		.when('/operations', {
 
-			templateUrl: 'app/views/pages/opt/project.html',
+			templateUrl: 'app/views/pages/opt/operation.html',
 			controller: 'OperationController',
 			controllerAs: 'operation'
 		})

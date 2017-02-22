@@ -4,6 +4,7 @@ angular.module('templateCtrl', ['templateService'])
 
 	var vm = this;
 
+	vm.pageTitle = "Template page";
 
 	Story.allMyStory()
 		.success(function(data){

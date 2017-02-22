@@ -4,6 +4,7 @@ angular.module('operationCtrl', ['operationService'])
 
 	var vm = this;
 
+	vm.pageTitle = "Operation page";
 
 	Story.allMyStory()
 		.success(function(data){
