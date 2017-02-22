@@ -1,0 +1,32 @@
+<div class="container" ng-controller="OperationTask as opt">
+
+	<div class="row">
+			<div class="col-sm-6 col-md-4 col-md-offset-4">
+
+				<h3>Create Operation</h3>
+
+					<form method="post" class="form-sigin" name="optForm" ng-submit='opt.createOperation()'>
+
+						<div class="form-group">
+						    <label for="application">Application:</label>
+						    <select ng-model="opt.optData.application_id" id="application" class="form-control" required>
+						    	<option value="select">Select</option>
+						    </select>
+						 </div>
+
+						<div class="form-group">
+						    <label for="title">Title:</label>
+						    <input type="text" class="form-control" id="title" ng-model="opt.optData.title"  required>
+						 </div>
+
+						<!-- Username: <input type="text" class="form-control" name="username" ng-model="opt.optData.username" />
+
+						Password: <input type="password" class="form-control" name="password" ng-model="opt.optData.password" /> -->
+
+						<button ng-disabled="optForm.$idirty || optForm.$invalid" type="submit" class="btn btn-primary">CREATE </button>
+						
+					</form>
+			</div>
+		</div>
+
+</div>

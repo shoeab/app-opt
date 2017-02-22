@@ -1,6 +1,6 @@
 angular.module('applicationCtrl', ['applicationService'])
 
-.controller('ApplicationController', function(Story){
+.controller('ApplicationController', function(Application){
 
 	var vm = this;
 
@@ -35,10 +35,20 @@ angular.module('applicationCtrl', ['applicationService'])
 
 })
 
-.controller('ApplicationTask', function(Story){
+.controller('ApplicationTask', function(Application){
 	
 	var vm = this;
 
 	vm.pageTitle = "Application page";
+
+	vm.createApplication = function(){
+
+		console.log(vm.appData);
+
+		/*App.createApplication()
+			.success(function(data){
+				vm.
+			})*/
+	}
 	
 })

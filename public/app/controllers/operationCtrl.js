@@ -28,9 +28,21 @@ angular.module('operationCtrl', ['operationService'])
 
 	};
 
+})
+
+.controller('OperationTask', function(Operation){
 	
+	var vm = this;
 
-		
 
+	vm.createOperation = function(){
 
+		console.log(vm.optData);
+
+		/*App.createApplication()
+			.success(function(data){
+				vm.
+			})*/
+	}
+	
 })
