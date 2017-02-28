@@ -38,8 +38,11 @@ angular.module('templateCtrl', ['templateService'])
 	$scope.counter = Array;
 	$scope.formCount = 1;
 
-	$scope.increaseFormCount = function(){
-		$scope.formCount += 1;
+	$scope.increaseFormCount = function(op){
+		if(op=='plus')
+			$scope.formCount += 1;
+		else if(op=='minus')
+			$scope.formCount -= 1;
 	}
 	vm.createTemplate = function(){
 		

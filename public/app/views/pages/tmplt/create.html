@@ -7,7 +7,7 @@
 
 					<form method="post" class="form-sigin" name="tmpltForm" ng-submit='tmplt.createTemplate()' ng-repeat="i in counter(formCount) track by $index">
 						<h4>Template {{$index+1}}</h4>
-						<div class="form-group">
+						<div class="form-group" ng-show="$first">
 						    <label for="operation">Operation:</label>
 						    <select ng-model="tmplt.tmpltData.operation_id" id="operation" class="form-control" required>
 						    	<option value="select">Select</option>
@@ -17,6 +17,11 @@
 						<div class="form-group">
 						    <label for="title">Title:</label>
 						    <input type="text" class="form-control" id="title" ng-model="tmplt.tmpltData.title"  required>
+						 </div>
+
+						<div class="form-group">
+						    <label for="title">URL Path:</label>
+						    <input type="text" class="form-control" id="title" ng-model="tmplt.tmpltData.path"  required>
 						 </div>
 
 						<fieldset class="" data-ng-repeat="choice in choices">
@@ -47,7 +52,8 @@
 
 						<button ng-show="$last" ng-disabled="tmpltForm.$idirty || tmpltForm.$invalid" type="submit" class="btn btn-success">CREATE </button>
 
-						<a ng-show="$last" href="javascript:void(0)" ng-click="increaseFormCount()" class="btn btn-primary">ADD A NEW TEMPLATE</a>
+						<a ng-show="$last" href="javascript:void(0)" ng-click="increaseFormCount('plus')" class="btn btn-primary">+ TEMPLATE</a>
+						<a ng-show="$last" href="javascript:void(0)" ng-click="increaseFormCount('minus')" class="btn btn-primary">- TEMPLATE</a>
 						
 					</form>
 			</div>
