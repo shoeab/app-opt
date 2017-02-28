@@ -35,7 +35,12 @@ angular.module('templateCtrl', ['templateService'])
 	
 	var vm = this;
 	
+	$scope.counter = Array;
+	$scope.formCount = 1;
 
+	$scope.increaseFormCount = function(){
+		$scope.formCount += 1;
+	}
 	vm.createTemplate = function(){
 		
 		$scope.pairData = [];
