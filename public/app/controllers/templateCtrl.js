@@ -4,6 +4,7 @@ angular.module('templateCtrl', ['templateService'])
 
 	var vm = this;
 
+
 	vm.pageTitle = "Template page";
 
 	Story.allMyStory()
@@ -34,13 +35,15 @@ angular.module('templateCtrl', ['templateService'])
 .controller('TemplateTask', function(Template, $scope){
 	
 	var vm = this;
-	
+	$scope.choices = Array;
 	$scope.counter = Array;
 	$scope.formCount = 1;
 
-	$scope.increaseFormCount = function(op){
-		if(op=='plus')
+	$scope.increaseFormCount = function(op, index){
+		if(op=='plus'){
 			$scope.formCount += 1;
+			$scope.choices[index] = [{id: 'choice1'}];
+		}
 		else if(op=='minus')
 			$scope.formCount -= 1;
 	}
@@ -75,11 +78,11 @@ angular.module('templateCtrl', ['templateService'])
 			})*/
 	}
 
-	$scope.choices = [{id: 'choice1'}, {id: 'choice2'}];
+	$scope.choices[0] = [{id: 'choice1'}, {id: 'choice2'}];
 
-	$scope.addNewChoice = function() {
-	    var newItemNo = $scope.choices.length+1;
-	    $scope.choices.push({'id':'choice'+newItemNo});
+	$scope.addNewChoice = function(index) {
+	    var newItemNo = $scope.choices[index].length+1;
+	    $scope.choices[index].push({'id':'choice'+newItemNo});
 	};
 
 	$scope.removeChoice = function() {
