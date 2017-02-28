@@ -26,11 +26,11 @@
 
 						<fieldset class="" data-ng-repeat="choice in choices[$index]">
 							<div class="form-group col-sm-6">
-					      		<input type="text" class="form-control " ng-model="choice.key" name="" placeholder="Enter key" required>
+					      		<input type="text" class="form-control " ng-model="choice.key" name="" placeholder="key {{$index+1}}" required>
 					      	</div>
 					      	
 					      	<div class="form-group col-sm-6">
-					      		<input type="text" class="form-control col-sm-11" ng-model="choice.name" name="" placeholder="Enter value" required>
+					      		<input type="text" class="form-control col-sm-11" ng-model="choice.name" name="" placeholder="value {{$index+1}}" required>
 					      	</div>
 					      	
 					      	<div class="form-group">
