@@ -8,7 +8,7 @@ var projectRouter = require('./routers/project');
 var app = express();
 
 var PORT = 8080;
-var HOST_NAME = 'localhost';
+var HOST_NAME = '127.0.0.1';
 var DATABASE_NAME = 'project';
 
 mongoose.connect('mongodb://' + HOST_NAME + '/' + DATABASE_NAME);
