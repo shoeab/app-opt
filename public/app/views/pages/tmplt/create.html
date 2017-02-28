@@ -34,7 +34,7 @@
 					      	</div>
 					      	
 					      	<div class="form-group">
-					      		<a class="remove btn btn-danger" ng-if="choices.length>1" ng-show="$last" ng-click="removeChoice($parent.$index)">-</a>
+					      		<a class="remove btn btn-danger" ng-if="choices[$parent.$index].length>1" ng-show="$last" ng-click="removeChoice($parent.$parent.$index)">-</a>
 					      		<a class="btn btn-success" ng-show="$last" ng-click="addNewChoice($parent.$index)">+</a>
 					      	</div>
 					      	

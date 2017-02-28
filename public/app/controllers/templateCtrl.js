@@ -81,13 +81,15 @@ angular.module('templateCtrl', ['templateService'])
 	$scope.choices[0] = [{id: 'choice1'}, {id: 'choice2'}];
 
 	$scope.addNewChoice = function(index) {
+		console.log(index);
 	    var newItemNo = $scope.choices[index].length+1;
 	    $scope.choices[index].push({'id':'choice'+newItemNo});
 	};
 
-	$scope.removeChoice = function() {
-	    var lastItem = $scope.choices.length-1;
-	    $scope.choices.splice(lastItem);
+	$scope.removeChoice = function(index) {
+		console.log(index);
+	    var lastItem = $scope.choices[index].length-1;
+	    $scope.choices[index].splice(lastItem);
 	};
 	
 })
