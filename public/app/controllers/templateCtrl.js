@@ -53,6 +53,8 @@ angular.module('templateCtrl', ['templateService'])
 
 		angular.forEach(vm.tmpltData, function(value, key) {
 			console.log(value);
+
+			console.log($scope.choices[key]);
 		});
 
 		angular.forEach($scope.choices, function(value, key) {
@@ -63,7 +65,7 @@ angular.module('templateCtrl', ['templateService'])
 		  	$scope.pairData.push(obj);
 
 		  	
-		  	/*$scope.pairData.push({value.key+':'+value.name});*/
+		  	// $scope.pairData.push({value.key+':'+value.name});
 		});
 
 		console.log($scope.pairData);
