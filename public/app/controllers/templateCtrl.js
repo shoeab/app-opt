@@ -60,7 +60,7 @@ angular.module('templateCtrl', ['templateService'])
 			console.log($scope.choices[key]);
 		});
 
-		angular.forEach($scope.choices, function(value, key) {
+		/*angular.forEach($scope.choices, function(value, key) {
 		  	console.log(value.key);
 
 		  	var obj = {};
@@ -69,9 +69,9 @@ angular.module('templateCtrl', ['templateService'])
 
 		  	
 		  	// $scope.pairData.push({value.key+':'+value.name});
-		});
+		});*/
 
-		console.log($scope.pairData);
+		/*console.log($scope.pairData);*/
 		/*App.createApplication()
 			.success(function(data){
 				vm.
