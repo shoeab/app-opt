@@ -51,6 +51,10 @@ angular.module('templateCtrl', ['templateService'])
 		console.log(vm.tmpltData);
 		console.log($scope.choices);
 
+		angular.forEach(vm.tmpltData, function(value, key) {
+			console.log(value);
+		});
+
 		angular.forEach($scope.choices, function(value, key) {
 		  	console.log(value.key);
 

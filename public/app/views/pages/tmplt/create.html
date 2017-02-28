@@ -9,28 +9,28 @@
 						<h4>Template {{$index+1}}</h4>
 						<div class="form-group" ng-show="$first">
 						    <label for="operation">Operation:</label>
-						    <select ng-model="tmplt.tmpltData.operation_id" id="operation" class="form-control" required>
+						    <select ng-model="tmplt.tmpltData[$index].operation_id" id="operation" class="form-control">
 						    	<option value="select">Select</option>
 						    </select>
 						 </div>
 
 						<div class="form-group">
 						    <label for="title">Title:</label>
-						    <input type="text" class="form-control" id="title" ng-model="tmplt.tmpltData.title"  required>
+						    <input type="text" class="form-control" id="title" ng-model="tmplt.tmpltData[$index].title"  required>
 						 </div>
 
 						<div class="form-group">
 						    <label for="title">URL Path:</label>
-						    <input type="text" class="form-control" id="title" ng-model="tmplt.tmpltData.path"  required>
+						    <input type="text" class="form-control" id="title" ng-model="tmplt.tmpltData[$index].path"  required>
 						 </div>
 
 						<fieldset class="" data-ng-repeat="choice in choices">
 							<div class="form-group col-sm-6">
-					      		<input type="text" class="form-control " ng-model="choice.key" name="" placeholder="Enter key" required>
+					      		<input type="text" class="form-control " ng-model="choice[$index].key" name="" placeholder="Enter key" required>
 					      	</div>
 					      	
 					      	<div class="form-group col-sm-6">
-					      		<input type="text" class="form-control col-sm-11" ng-model="choice.name" name="" placeholder="Enter value" required>
+					      		<input type="text" class="form-control col-sm-11" ng-model="choice[$index].name" name="" placeholder="Enter value" required>
 					      	</div>
 					      	
 					      	<div class="form-group">
